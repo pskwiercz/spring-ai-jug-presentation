@@ -1,4 +1,4 @@
-package com.pskwiercz.jug.config;
+package com.pskwiercz.jug.init;
 
 import org.springframework.ai.document.Document;
 import org.springframework.ai.reader.ExtractedTextFormatter;
