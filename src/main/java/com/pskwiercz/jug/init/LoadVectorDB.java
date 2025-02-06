@@ -22,13 +22,16 @@ public class LoadVectorDB implements CommandLineRunner {
 
     @Value("classpath:SpringMCP.pdf")
     Resource resource;
+
     @Autowired
     private VectorStore vectorStore;
 
     @Override
     public void run(String... args) throws IOException {
+        initDB();
+    }
 
-
+    private void initDB() {
         List<Document> documents = new PagePdfDocumentReader(resource,
                 PdfDocumentReaderConfig.builder()
                         .withPageTopMargin(0)
