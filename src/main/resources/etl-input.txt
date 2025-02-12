@@ -1,0 +1,6 @@
+about the book
+Spring AI in Action introduces the reader to building generative AI applications with Spring AI.
+You’ll start with a simple “Hello AI world” example and quickly advance to more sophisticated techniques such
+as Retrieval Augmented Generation (RAG) and enabling conversations with your project’s own documents and data.
+You’ll love author and Spring legend Craig Walls’ practical example-driven approach with an emphasis
+on getting stuff done.
