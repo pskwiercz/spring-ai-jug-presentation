@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AdvisorController {
+public class ChatControllerWithMemory {
 
     private final ChatClient chatClient;
 
-    public AdvisorController(ChatClient.Builder builder) {
+    public ChatControllerWithMemory(ChatClient.Builder builder) {
         this.chatClient = builder
                 .defaultAdvisors(new MessageChatMemoryAdvisor(new InMemoryChatMemory()))
                 .build();

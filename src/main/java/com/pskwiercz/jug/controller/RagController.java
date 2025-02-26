@@ -49,7 +49,7 @@ public class RagController {
                 "input", question.question(),
                 "documents", String.join("\n", contentList)));
 
-//        contentList.forEach(System.out::println);
+        contentList.forEach(System.out::println);
 
         ChatResponse response = chatModel.call(prompt);
 

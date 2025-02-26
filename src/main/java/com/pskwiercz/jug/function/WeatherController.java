@@ -1,5 +1,6 @@
 package com.pskwiercz.jug.function;
 
+import com.pskwiercz.jug.model.Answer;
 import org.springframework.ai.chat.messages.UserMessage;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.model.ChatResponse;
@@ -21,7 +22,7 @@ public class WeatherController {
     }
 
     @GetMapping("/temp")
-    String temp(@RequestParam(name = "city", defaultValue = "Warsaw") String city) {
+    Answer temp(@RequestParam(name = "city", defaultValue = "Bydgoszcz") String city) {
 
         UserMessage userMessage =
                 new UserMessage("What is temperature in " + city);
@@ -33,6 +34,6 @@ public class WeatherController {
         ChatResponse chatResponse = chatModel
                 .call(new Prompt(List.of(userMessage), chatOptions));
 
-        return chatResponse.getResult().getOutput().getContent();
+        return new Answer(chatResponse.getResult().getOutput().getContent());
     }
 }

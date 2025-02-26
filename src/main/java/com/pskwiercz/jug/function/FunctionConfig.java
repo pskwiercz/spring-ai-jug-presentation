@@ -10,7 +10,7 @@ import java.util.function.Function;
 public class FunctionConfig {
 
     @Bean
-    @Description("Get temperature for the proviced city")
+    @Description("Get temperature for the provided city")
     public Function<WeatherService.Request, WeatherService.Response> getTemperature() {
         return new WeatherService();
     }

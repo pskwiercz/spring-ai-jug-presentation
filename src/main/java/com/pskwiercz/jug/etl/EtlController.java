@@ -47,7 +47,7 @@ public class EtlController {
 
 
         // Load
-        FileDocumentWriter writer = new FileDocumentWriter("output.txt",false, MetadataMode.ALL,false);
+        FileDocumentWriter writer = new FileDocumentWriter("etl-output.txt",false, MetadataMode.ALL,false);
         writer.accept(enricherDocuments1);
         writer.accept(enricherDocuments2);
 

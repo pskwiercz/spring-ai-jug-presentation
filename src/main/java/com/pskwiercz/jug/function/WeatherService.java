@@ -12,9 +12,10 @@ public class WeatherService implements Function<WeatherService.Request, WeatherS
 
     @Override
     public Response apply(Request request) {
+        // Call some API, run SQL query, etc.
         String temp;
 
-        if (request.city().equals("Warsaw")) {
+        if (request.city().equals("Bydgoszcz")) {
             temp = "27";
         } else {
             temp = "10";
